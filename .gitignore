@@ -1,0 +1,21 @@
+# Virtual environment
+venv/
+.venv/
+
+# SAP credentials / secrets
+config/secrets.yaml
+*.env
+.env
+
+# Output data (Excel reports, logs)
+data/output/
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,33 @@
+# config/config.yaml
+sap:
+  input_file: "data/raw/grir_open_items.xlsx"
+  sheet_name: "GR-IR Open Items Register"
+  company_code: "1000"
+  report_date: "2025-03-31"
+
+tfidf_matching:
+  vendor_similarity_threshold: 0.9   
+  max_candidates: 5                    
+
+rule_scoring:
+
+  po_number_match_weight: 35          
+  vendor_similarity_weight: 25      
+  amount_tolerance_weight: 25       
+  date_tolerance_weight: 10          
+  currency_match_weight: 5           
+
+  amount_tolerance_pct: 0.5           
+  amount_tolerance_abs_inr: 100      
+  date_tolerance_days: 60       
+  auto_clear_score: 80          
+  review_score: 55          
+                                      
+output:
+  cleared_report: "data/output/auto_clear.csv"
+  review_report: "data/output/review.csv"
+  hold_report: "data/output/hold.csv"
+  escalate_report: "data/output/escalate.csv"
+  posting_log: "data/output/posting_log.csv"
+
+  

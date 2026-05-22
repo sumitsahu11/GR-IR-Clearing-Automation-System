@@ -1,0 +1,940 @@
+2026-04-23 14:42:16.685 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 14:42:16.696 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 14:42:16.696 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 14:42:16.700 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 14:42:16.700 | INFO     | src.extractor:load_sap_data:14 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 14:44:22.943 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 14:44:22.943 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 14:44:22.943 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 14:44:22.953 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 14:44:22.953 | INFO     | src.extractor:load_sap_data:14 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 14:45:37.292 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 14:45:37.292 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 14:45:37.292 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 14:45:37.292 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 14:45:37.292 | INFO     | src.extractor:load_sap_data:16 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 14:45:37.819 | INFO     | src.extractor:load_sap_data:40 - Loaded columns: ['SAP GR/IR OPEN ITEMS REGISTER — Company Code 1000 | Report Date: 31-Mar-2025 | Status: PENDING CLEARANCE', 'Unnamed: 1', 'Unnamed: 2', 'Unnamed: 3', 'Unnamed: 4', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10', 'Unnamed: 11', 'Unnamed: 12', 'Unnamed: 13', 'Unnamed: 14', 'Unnamed: 15', 'Unnamed: 16', 'Unnamed: 17', 'Unnamed: 18', 'Unnamed: 19', 'Unnamed: 20', 'Unnamed: 21', 'Unnamed: 22', 'Unnamed: 23', 'Unnamed: 24', 'Unnamed: 25', 'Unnamed: 26', 'Unnamed: 27', 'Unnamed: 28', 'Unnamed: 29', 'Unnamed: 30', 'Unnamed: 31', 'Unnamed: 32', 'Unnamed: 33', 'Unnamed: 34', 'Unnamed: 35']
+2026-04-23 14:47:07.492 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 14:47:07.492 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 14:47:07.492 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 14:47:07.492 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 14:47:07.492 | INFO     | src.extractor:load_sap_data:28 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 14:47:08.065 | INFO     | src.extractor:load_sap_data:47 - Loaded columns: ['3', '1000', '2000', '4500100003', '0020', 'NB', 'Equipment Maintenance', '1000017', 'HAVL', 'Electrical', '5000100003', '2025-01-23 00:00:00', '2025', '119.488', '2949947.66', 'Havells India Ltd', 'NOT RECEIVED', 'Unnamed: 17', 'Unnamed: 18', '-', '0', '0.1', 'Unnamed: 22', 'INR', '1002', 'CC-MFG-005', '400400', 'NT45', '67', '61-90 Days', 'MISSING INVOICE', 'Goods received but vendor invoice not yet submitted', 'Unnamed: 32', 'Unnamed: 33', 'Unnamed: 34', 'Unnamed: 35']
+2026-04-23 14:47:57.710 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 14:47:57.710 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 14:47:57.710 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 14:47:57.710 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 14:47:57.710 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 14:47:58.171 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 14:47:58.241 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 14:47:58.254 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 14:47:58.254 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 14:47:58.254 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 14:47:58.254 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 14:47:58.266 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 14:47:58.266 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 14:47:58.266 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 14:47:58.345 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 14:47:58.345 | INFO     | src.rule_scorer:apply_rule_scoring:129 - Applying weighted rule-based scoring...
+2026-04-23 14:47:58.361 | SUCCESS  | src.rule_scorer:apply_rule_scoring:154 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 14:47:58.361 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:06:52.509 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:06:52.510 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:06:52.510 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:06:52.512 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:06:52.512 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:06:53.019 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:06:53.081 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:06:53.091 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:06:53.093 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:06:53.094 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:06:53.094 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:06:53.094 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:06:53.094 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:06:53.094 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:06:53.156 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:06:53.156 | INFO     | src.rule_scorer:apply_rule_scoring:129 - Applying weighted rule-based scoring...
+2026-04-23 15:06:53.178 | SUCCESS  | src.rule_scorer:apply_rule_scoring:154 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:06:53.178 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:08:40.644 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:08:40.644 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:08:40.659 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:08:40.660 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:08:40.660 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:08:41.120 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:08:41.187 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:08:41.194 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:08:41.194 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:08:41.201 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:08:41.201 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:08:41.201 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:08:41.201 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:08:41.201 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:08:41.271 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:08:41.271 | INFO     | src.rule_scorer:apply_rule_scoring:129 - Applying weighted rule-based scoring...
+2026-04-23 15:08:41.279 | SUCCESS  | src.rule_scorer:apply_rule_scoring:154 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:08:41.279 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:09:40.434 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:09:40.434 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:09:40.434 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:09:40.434 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:09:40.434 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:09:40.993 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:09:41.054 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:09:41.055 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:09:41.055 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:09:41.068 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:09:41.068 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:09:41.068 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:09:41.075 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:09:41.075 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:09:41.144 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:09:41.144 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-23 15:09:41.148 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:09:41.148 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:09:41.157 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:09:41.157 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:09:41.157 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:09:41.157 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:09:41.162 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:09:41.169 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-23 15:09:41.169 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-23 15:09:41.178 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-23 15:09:41.184 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-23 15:09:41.184 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-23 15:09:41.184 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-23 15:11:26.547 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:11:26.547 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:11:26.547 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:11:26.557 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:11:26.557 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:11:27.016 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:11:27.077 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:11:27.081 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:11:27.081 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:11:27.091 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:11:27.091 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:11:27.091 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:11:27.102 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:11:27.102 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:11:27.160 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:11:27.160 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-23 15:11:27.182 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:11:27.185 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:11:27.192 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:11:27.202 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:11:27.202 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-23 15:11:27.208 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-23 15:11:27.213 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-23 15:11:27.213 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-23 15:11:27.213 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-23 15:11:27.213 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-23 15:11:27.228 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 129 | Failed: 10 | Cash Unlocked: Rs.225,866,966.30
+2026-04-23 15:11:27.228 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 129 items cleared in SAP. Check data/output/ for reports.
+2026-04-23 15:19:19.014 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:19:19.014 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:19:19.014 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:19:19.017 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:19:19.017 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:19:19.489 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:19:19.552 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:19:19.563 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:19:19.563 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:19:19.568 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:19:19.568 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:19:19.568 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:19:19.568 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:19:19.568 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:19:19.648 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:19:19.648 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-23 15:19:19.661 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:19:19.663 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:19:19.663 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-23 15:19:19.663 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-23 15:19:19.663 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-23 15:19:19.679 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-23 15:19:19.679 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-23 15:19:19.681 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-23 15:19:19.688 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 132 | Failed: 7 | Cash Unlocked: Rs.237,562,867.86
+2026-04-23 15:19:19.688 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 132 items cleared in SAP. Check data/output/ for reports.
+2026-04-23 15:22:25.601 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-23 15:22:25.601 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-23 15:22:25.603 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-23 15:22:25.603 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-23 15:22:25.603 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-23 15:22:26.046 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-23 15:22:26.111 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-23 15:22:26.118 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-23 15:22:26.118 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-23 15:22:26.125 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-23 15:22:26.125 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-23 15:22:26.128 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-23 15:22:26.128 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-23 15:22:26.128 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-23 15:22:26.191 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-23 15:22:26.191 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-23 15:22:26.205 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:46 - 
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-23 15:22:26.214 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-23 15:22:26.220 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-23 15:22:26.228 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-23 15:22:26.228 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-23 15:22:26.228 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-23 15:22:26.228 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-23 15:22:26.228 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-23 15:22:26.243 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 132 | Failed: 7 | Cash Unlocked: Rs.238,850,219.52
+2026-04-23 15:22:26.243 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 132 items cleared in SAP. Check data/output/ for reports.
+2026-04-24 14:51:03.448 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-24 14:51:03.448 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-24 14:51:03.448 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-24 14:51:03.460 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-24 14:51:03.460 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-24 14:51:04.775 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-24 14:51:04.820 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-24 14:51:04.838 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-24 14:51:04.838 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-24 14:51:04.856 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-24 14:51:04.856 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-24 14:51:04.856 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-24 14:51:04.860 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-24 14:51:04.860 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-24 14:51:04.925 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-24 14:51:04.925 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-24 14:51:04.931 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:46 - 
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-24 14:51:04.931 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-24 14:51:04.943 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-24 14:51:04.943 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-24 14:51:04.947 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-24 14:51:04.947 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-24 14:51:04.947 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-24 14:51:04.947 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-24 14:51:04.963 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 131 | Failed: 8 | Cash Unlocked: Rs.239,921,117.94
+2026-04-24 14:51:04.963 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 131 items cleared in SAP. Check data/output/ for reports.
+2026-04-24 18:03:39.928 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-24 18:03:39.934 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-24 18:03:39.937 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-24 18:03:39.942 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-24 18:03:39.942 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-24 18:03:40.907 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-24 18:03:41.002 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-24 18:03:41.017 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-24 18:03:41.017 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-24 18:03:41.033 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-24 18:03:41.033 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-24 18:03:41.033 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-24 18:03:41.065 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-24 18:03:41.065 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-24 18:03:41.191 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-24 18:03:41.194 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-24 18:03:41.252 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-24 18:03:41.267 | INFO     | __main__:run_pipeline:46 - 
+2026-04-24 18:03:41.268 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-24 18:03:41.269 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-24 18:03:41.270 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-24 18:03:41.270 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-24 18:03:41.271 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-24 18:03:41.271 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-24 18:03:41.272 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-24 18:03:41.273 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-24 18:03:41.273 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-24 18:03:41.274 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-24 18:03:41.293 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-24 18:03:41.303 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-24 18:03:41.318 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-24 18:03:41.322 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-24 18:03:41.327 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-24 18:03:41.328 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-24 18:03:41.360 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 132 | Failed: 7 | Cash Unlocked: Rs.238,920,536.03
+2026-04-24 18:03:41.360 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 132 items cleared in SAP. Check data/output/ for reports.
+2026-04-25 15:16:36.098 | INFO     | __main__:run_pipeline:16 - =================================================================
+2026-04-25 15:16:36.101 | INFO     | __main__:run_pipeline:17 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-25 15:16:36.101 | INFO     | __main__:run_pipeline:18 - =================================================================
+2026-04-25 15:16:36.118 | INFO     | __main__:run_pipeline:22 - Config loaded successfully
+2026-04-25 15:16:36.118 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-25 15:16:39.346 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-25 15:16:39.613 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-25 15:16:39.629 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-25 15:16:39.644 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-25 15:16:39.663 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-25 15:16:39.663 | INFO     | __main__:run_pipeline:26 - Total open items loaded: 200
+2026-04-25 15:16:39.663 | INFO     | src.tfidf_matcher:apply_tfidf_matching:119 - Building TF-IDF model on all vendor names...
+2026-04-25 15:16:39.692 | INFO     | src.tfidf_matcher:build_tfidf_matrix:70 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-25 15:16:39.692 | INFO     | src.tfidf_matcher:apply_tfidf_matching:129 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-25 15:16:39.994 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:150 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-25 15:16:39.996 | INFO     | src.rule_scorer:apply_rule_scoring:130 - Applying weighted rule-based scoring...
+2026-04-25 15:16:40.029 | SUCCESS  | src.rule_scorer:apply_rule_scoring:155 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-25 15:16:40.042 | INFO     | __main__:run_pipeline:46 - 
+2026-04-25 15:16:40.044 | INFO     | __main__:run_pipeline:47 - ──────────────────────────────────────────────────
+2026-04-25 15:16:40.044 | INFO     | __main__:run_pipeline:48 -   PIPELINE RESULTS SUMMARY
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:49 - ──────────────────────────────────────────────────
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:50 -   Total Items     : 200
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:51 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:52 -   REVIEW          : 47  (23.5%)
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:53 -   HOLD            : 1  (0.5%)
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:54 -   ESCALATE        : 13 (6.5%)
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:55 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-25 15:16:40.046 | INFO     | __main__:run_pipeline:56 - ──────────────────────────────────────────────────
+2026-04-25 15:16:40.063 | INFO     | src.rule_scorer:save_reports:185 - Saved 139 items → data\output\auto_clear.csv
+2026-04-25 15:16:40.081 | INFO     | src.rule_scorer:save_reports:185 - Saved 47 items → data\output\review.csv
+2026-04-25 15:16:40.081 | INFO     | src.rule_scorer:save_reports:185 - Saved 1 items → data\output\hold.csv
+2026-04-25 15:16:40.097 | INFO     | src.rule_scorer:save_reports:185 - Saved 13 items → data\output\escalate.csv
+2026-04-25 15:16:40.097 | SUCCESS  | src.rule_scorer:save_reports:187 - All reports saved successfully!
+2026-04-25 15:16:40.097 | INFO     | src.poster:run_auto_posting:38 - Starting SAP auto-posting for 139 items...
+2026-04-25 15:16:40.148 | SUCCESS  | src.poster:run_auto_posting:56 - Posting complete | Cleared: 131 | Failed: 8 | Cash Unlocked: Rs.242,983,989.28
+2026-04-25 15:16:40.148 | SUCCESS  | __main__:run_pipeline:65 - Pipeline complete! 131 items cleared in SAP. Check data/output/ for reports.
+2026-04-26 18:04:02.558 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-26 18:04:02.559 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-26 18:04:02.559 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-26 18:04:02.562 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-26 18:04:02.562 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-26 18:04:04.145 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-26 18:04:04.205 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-26 18:04:04.210 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-26 18:04:04.210 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-26 18:04:04.226 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-26 18:04:04.226 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-26 18:04:04.226 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-26 18:04:04.232 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-26 18:04:04.232 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-26 18:04:04.298 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-26 18:04:04.298 | INFO     | src.rule_scorer:apply_rule_scoring:115 - Applying weighted rule-based scoring...
+2026-04-26 18:04:04.306 | SUCCESS  | src.rule_scorer:apply_rule_scoring:140 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:45 - 
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-26 18:04:04.306 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-26 18:04:04.306 | INFO     | src.rule_scorer:save_reports:167 - Saved 139 items → data\output\auto_clear.csv
+2026-04-26 18:04:04.306 | INFO     | src.rule_scorer:save_reports:167 - Saved 47 items → data\output\review.csv
+2026-04-26 18:04:04.321 | INFO     | src.rule_scorer:save_reports:167 - Saved 1 items → data\output\hold.csv
+2026-04-26 18:04:04.324 | INFO     | src.rule_scorer:save_reports:167 - Saved 13 items → data\output\escalate.csv
+2026-04-26 18:04:04.324 | SUCCESS  | src.rule_scorer:save_reports:169 - All reports saved successfully!
+2026-04-26 18:04:04.324 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-26 18:04:04.336 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 134 | Failed: 5 | Cash Unlocked: Rs.236,311,393.69
+2026-04-26 18:04:04.336 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 134 items cleared in SAP. Check data/output/ for reports.
+2026-04-26 19:48:37.562 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-26 19:48:37.562 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-26 19:48:37.562 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-26 19:48:37.572 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-26 19:48:37.572 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-26 19:48:38.434 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-26 19:48:38.539 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-26 19:48:38.553 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-26 19:48:38.569 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-26 19:48:38.569 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-26 19:48:38.569 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-26 19:48:38.569 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-26 19:48:38.603 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-26 19:48:38.603 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-26 19:48:38.749 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-26 19:48:38.749 | INFO     | src.rule_scorer:apply_rule_scoring:115 - Applying weighted rule-based scoring...
+2026-04-26 19:48:38.772 | SUCCESS  | src.rule_scorer:apply_rule_scoring:140 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:45 - 
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-26 19:48:38.775 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-26 19:48:38.793 | INFO     | src.rule_scorer:save_reports:167 - Saved 139 items → data\output\auto_clear.csv
+2026-04-26 19:48:38.793 | INFO     | src.rule_scorer:save_reports:167 - Saved 47 items → data\output\review.csv
+2026-04-26 19:48:38.808 | INFO     | src.rule_scorer:save_reports:167 - Saved 1 items → data\output\hold.csv
+2026-04-26 19:48:38.814 | INFO     | src.rule_scorer:save_reports:167 - Saved 13 items → data\output\escalate.csv
+2026-04-26 19:48:38.818 | SUCCESS  | src.rule_scorer:save_reports:169 - All reports saved successfully!
+2026-04-26 19:48:38.818 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-26 19:48:38.838 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 132 | Failed: 7 | Cash Unlocked: Rs.234,615,417.05
+2026-04-26 19:48:38.838 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 132 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 09:37:15.271 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 09:37:15.271 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 09:37:15.271 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 09:37:15.282 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 09:37:15.282 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 09:37:16.169 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 09:37:16.301 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 09:37:16.329 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 09:37:16.329 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 09:37:16.344 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 09:37:16.344 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 09:37:16.350 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 09:37:16.361 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 09:37:16.361 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 09:37:16.535 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 09:37:16.535 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 09:37:16.559 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 09:37:16.566 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 09:37:16.584 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 09:37:16.589 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 09:37:16.592 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 09:37:16.598 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 09:37:16.598 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 09:37:16.598 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 09:37:16.614 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 130 | Failed: 9 | Cash Unlocked: Rs.229,225,418.22
+2026-04-27 09:37:16.630 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 130 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 11:34:35.334 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 11:34:35.334 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 11:34:35.341 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 11:34:35.341 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 11:34:35.341 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 11:34:35.913 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 11:34:35.963 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 11:34:35.984 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 11:34:35.984 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 11:34:35.992 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 11:34:35.992 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 11:34:35.992 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 11:34:35.992 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 11:34:35.992 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 11:34:36.071 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 11:34:36.071 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 11:34:36.087 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 11:34:36.087 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 11:34:36.093 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 11:34:36.093 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 11:34:36.095 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 11:34:36.095 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 11:34:36.095 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 11:34:36.095 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 11:34:36.097 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 11:34:36.099 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 11:34:36.099 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 11:34:36.101 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 11:34:36.105 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 11:34:36.105 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 11:34:36.116 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 11:34:36.116 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 11:34:36.116 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 11:34:36.119 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 11:34:36.119 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 134 | Failed: 5 | Cash Unlocked: Rs.247,898,242.91
+2026-04-27 11:34:36.119 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 134 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 14:50:54.830 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 14:50:54.830 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 14:50:54.830 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 14:50:54.830 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 14:50:54.830 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 14:50:56.361 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 14:50:56.418 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 14:50:56.438 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 14:50:56.438 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 14:50:56.453 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 14:50:56.453 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 14:50:56.453 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 14:50:56.466 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 14:50:56.466 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 14:50:56.538 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 14:50:56.538 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 14:50:56.547 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 14:50:56.547 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 14:50:56.561 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 14:50:56.562 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 14:50:56.562 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 14:50:56.562 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 14:50:56.562 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 14:50:56.562 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 14:50:56.582 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 134 | Failed: 5 | Cash Unlocked: Rs.238,814,958.88
+2026-04-27 14:50:56.582 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 134 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 15:14:03.809 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 15:14:03.809 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 15:14:03.809 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 15:14:03.814 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 15:14:03.814 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 15:14:04.400 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 15:14:04.477 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 15:14:04.496 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 15:14:04.496 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 15:14:04.504 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 15:14:04.507 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 15:14:04.507 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 15:14:04.516 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 15:14:04.516 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 15:14:04.592 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 15:14:04.594 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 15:14:04.594 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 15:14:04.609 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 15:14:04.616 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 15:14:04.616 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 15:14:04.624 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 15:14:04.624 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 15:14:04.624 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 15:14:04.624 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 15:14:04.640 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 133 | Failed: 6 | Cash Unlocked: Rs.244,062,763.60
+2026-04-27 15:14:04.640 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 133 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 15:15:20.564 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 15:15:20.564 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 15:15:20.564 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 15:15:20.564 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 15:15:20.564 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 15:15:21.003 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 15:15:21.064 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 15:15:21.066 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 15:15:21.066 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 15:15:21.066 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 15:15:21.066 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 15:15:21.066 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 15:15:21.082 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 15:15:21.082 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 15:15:21.150 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 15:15:21.150 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 15:15:21.150 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 15:15:21.160 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 15:15:21.160 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 15:15:21.160 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 15:15:21.160 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 15:15:21.161 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 15:15:21.161 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 15:15:21.161 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 15:15:21.161 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 15:15:21.163 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 15:15:21.163 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 15:15:21.164 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 15:15:21.164 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 15:15:21.164 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 15:15:21.164 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 15:15:21.164 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 15:15:21.164 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 15:15:21.164 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 15:15:21.177 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 132 | Failed: 7 | Cash Unlocked: Rs.237,727,917.26
+2026-04-27 15:15:21.177 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 132 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 15:21:30.200 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 15:21:30.200 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 15:21:30.200 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 15:21:30.200 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 15:21:30.200 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 15:21:30.884 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 15:21:31.004 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 15:21:31.005 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 15:21:31.005 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 15:21:31.025 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 15:21:31.025 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 15:21:31.025 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 15:21:31.038 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 15:21:31.038 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 15:21:31.158 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 154 | Medium: 33 | Low: 13
+2026-04-27 15:21:31.158 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 15:21:31.164 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 15:21:31.179 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 15:21:31.184 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 15:21:31.184 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 15:21:31.199 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 15:21:31.207 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 15:21:31.211 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 15:21:31.215 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 15:21:31.215 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 15:21:31.215 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 15:21:31.245 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 135 | Failed: 4 | Cash Unlocked: Rs.240,474,393.48
+2026-04-27 15:21:31.245 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 135 items cleared in SAP. Check data/output/ for reports.
+2026-04-27 22:13:46.401 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-27 22:13:46.401 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-27 22:13:46.401 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-27 22:13:46.419 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-27 22:13:46.421 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-27 22:13:48.210 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-27 22:13:48.308 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-27 22:13:48.335 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-27 22:13:48.337 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-27 22:13:48.356 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-27 22:13:48.356 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-27 22:13:48.356 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-27 22:13:48.368 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-27 22:13:48.370 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-27 22:13:48.481 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-27 22:13:48.481 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-27 22:13:48.499 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:45 - 
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-27 22:13:48.513 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-27 22:13:48.522 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-27 22:13:48.522 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-27 22:13:48.522 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-27 22:13:48.522 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-27 22:13:48.529 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-27 22:13:48.545 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-27 22:13:48.548 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-27 22:13:48.558 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-27 22:13:48.558 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-27 22:13:48.558 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-27 22:13:48.586 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 131 | Failed: 8 | Cash Unlocked: Rs.229,192,790.82
+2026-04-27 22:13:48.586 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 131 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 16:39:16.812 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 16:39:16.812 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 16:39:16.821 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 16:39:16.823 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 16:39:16.823 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 16:39:18.149 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 16:39:18.203 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 16:39:18.210 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 16:39:18.210 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 16:39:18.221 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 16:39:18.221 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 16:39:18.221 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 16:39:18.234 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 16:39:18.234 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 16:39:18.298 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 16:39:18.298 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 16:39:18.301 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 16:39:18.310 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 16:39:18.320 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 16:39:18.320 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 16:39:18.320 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 16:39:18.320 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 16:39:18.320 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 16:39:18.320 | INFO     | src.poster:run_auto_posting:31 - Starting SAP auto-posting for 139 items...
+2026-04-28 16:39:18.339 | SUCCESS  | src.poster:run_auto_posting:49 - Posting complete | Cleared: 130 | Failed: 9 | Cash Unlocked: Rs.235,646,167.08
+2026-04-28 16:39:18.339 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 130 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 16:54:26.937 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 16:54:26.938 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 16:54:26.938 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 16:54:26.939 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 16:54:26.939 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 16:54:27.477 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 16:54:27.542 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 16:54:27.556 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 16:54:27.556 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 16:54:27.570 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 16:54:27.570 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 16:54:27.570 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 16:54:27.570 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 16:54:27.570 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 16:54:27.655 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 16:54:27.655 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 16:54:27.666 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 16:54:27.668 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 16:54:27.678 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 16:54:27.682 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 16:54:27.684 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 16:54:27.688 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 16:54:27.688 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 16:54:27.690 | INFO     | src.poster:run_auto_posting:130 - Starting SAP auto-posting for 139 items...
+2026-04-28 16:54:27.706 | SUCCESS  | src.poster:run_auto_posting:157 - Posting complete | Cleared: 125 | Failed: 14 | Cash Unlocked: Rs.222,600,772.01
+2026-04-28 16:54:27.706 | WARNING  | src.poster:run_auto_posting:163 -   14 items could NOT be auto-posted — reasons:
+2026-04-28 16:54:27.706 | WARNING  | src.poster:run_auto_posting:165 -     [14x] AMOUNT MISMATCH
+2026-04-28 16:54:27.706 | WARNING  | src.poster:run_auto_posting:166 -   Failed items blocked Rs.28,182,419.89 — check posting_log CSV for full details
+2026-04-28 16:54:27.708 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 125 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 16:59:50.531 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 16:59:50.531 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 16:59:50.531 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 16:59:50.541 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 16:59:50.541 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 16:59:51.110 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 16:59:51.171 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 16:59:51.193 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 16:59:51.193 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 16:59:51.200 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 16:59:51.200 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 16:59:51.200 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 16:59:51.200 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 16:59:51.200 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 16:59:51.281 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 16:59:51.281 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 16:59:51.295 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 16:59:51.297 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 16:59:51.297 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 16:59:51.297 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 16:59:51.312 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 16:59:51.314 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 16:59:51.314 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 16:59:51.314 | INFO     | src.poster:run_auto_posting:87 - Starting SAP auto-posting for 139 items...
+2026-04-28 16:59:51.327 | SUCCESS  | src.poster:run_auto_posting:100 - Posting complete | Cleared: 139 / 139 | Cash Unlocked: Rs.250,783,191.90
+2026-04-28 16:59:51.327 | INFO     | src.poster:run_auto_posting:104 - Posting log saved → data/output/posting_log.csv
+2026-04-28 16:59:51.327 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 139 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 17:04:45.906 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 17:04:45.906 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 17:04:45.906 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 17:04:45.906 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 17:04:45.906 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 17:04:46.398 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 17:04:46.461 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 17:04:46.467 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 17:04:46.467 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 17:04:46.475 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 17:04:46.475 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 17:04:46.475 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 17:04:46.481 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 17:04:46.481 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 17:04:46.549 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 17:04:46.549 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 17:04:46.556 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 17:04:46.558 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 17:04:46.560 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 17:04:46.569 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 17:04:46.569 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 17:04:46.572 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 17:04:46.572 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 17:04:46.572 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 17:04:46.572 | INFO     | src.poster:run_auto_posting:87 - Starting SAP auto-posting for 139 items...
+2026-04-28 17:04:46.588 | SUCCESS  | src.poster:run_auto_posting:100 - Posting complete | Cleared: 139 / 139 | Cash Unlocked: Rs.250,783,191.90
+2026-04-28 17:04:46.588 | INFO     | src.poster:run_auto_posting:104 - Posting log saved → data/output/posting_log.csv
+2026-04-28 17:04:46.588 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 139 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 17:05:18.004 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 17:05:18.004 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 17:05:18.004 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 17:05:18.021 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 17:05:18.021 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 17:05:18.530 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 17:05:18.592 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 17:05:18.598 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 17:05:18.598 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 17:05:18.608 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 17:05:18.610 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 17:05:18.610 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 17:05:18.610 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 17:05:18.610 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 17:05:18.681 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 17:05:18.681 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 17:05:18.689 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 17:05:18.692 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 17:05:18.692 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 17:05:18.703 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 17:05:18.703 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 17:05:18.703 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 17:05:18.703 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 17:05:18.703 | INFO     | src.poster:run_auto_posting:87 - Starting SAP auto-posting for 139 items...
+2026-04-28 17:05:18.719 | SUCCESS  | src.poster:run_auto_posting:100 - Posting complete | Cleared: 139 / 139 | Cash Unlocked: Rs.250,783,191.90
+2026-04-28 17:05:18.719 | INFO     | src.poster:run_auto_posting:104 - Posting log saved → data/output/posting_log.csv
+2026-04-28 17:05:18.719 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 139 items cleared in SAP. Check data/output/ for reports.
+2026-04-28 17:40:36.803 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-28 17:40:36.803 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-28 17:40:36.803 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-28 17:40:36.816 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-28 17:40:36.816 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-28 17:40:37.598 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-28 17:40:37.738 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-28 17:40:37.760 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-28 17:40:37.762 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-28 17:40:37.772 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-28 17:40:37.772 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-28 17:40:37.772 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-28 17:40:37.792 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-28 17:40:37.792 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-28 17:40:37.976 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-28 17:40:37.976 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-28 17:40:37.994 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-28 17:40:37.994 | INFO     | __main__:run_pipeline:45 - 
+2026-04-28 17:40:37.994 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-28 17:40:37.994 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-28 17:40:38.008 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-28 17:40:38.008 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-28 17:40:38.008 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-28 17:40:38.024 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-28 17:40:38.030 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-28 17:40:38.030 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-28 17:40:38.030 | INFO     | src.poster:run_auto_posting:87 - Starting SAP auto-posting for 139 items...
+2026-04-28 17:40:38.061 | SUCCESS  | src.poster:run_auto_posting:100 - Posting complete | Cleared: 139 / 139 | Cash Unlocked: Rs.250,783,191.90
+2026-04-28 17:40:38.061 | INFO     | src.poster:run_auto_posting:104 - Posting log saved → data/output/posting_log.csv
+2026-04-28 17:40:38.064 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 139 items cleared in SAP. Check data/output/ for reports.
+2026-04-29 14:29:26.535 | INFO     | __main__:run_pipeline:15 - =================================================================
+2026-04-29 14:29:26.535 | INFO     | __main__:run_pipeline:16 -    GR/IR CLEARING AUTOMATION — TF-IDF + RULE-BASED ENGINE
+2026-04-29 14:29:26.535 | INFO     | __main__:run_pipeline:17 - =================================================================
+2026-04-29 14:29:26.551 | INFO     | __main__:run_pipeline:21 - Config loaded successfully
+2026-04-29 14:29:26.551 | INFO     | src.extractor:load_sap_data:35 - Loading SAP data: data/raw/grir_open_items.xlsx | Sheet: GR-IR Open Items Register
+2026-04-29 14:29:27.895 | INFO     | src.extractor:load_sap_data:38 - Detected header row: 1
+2026-04-29 14:29:27.957 | INFO     | src.extractor:load_sap_data:53 - Loaded columns: ['Sr No', 'Company Code', 'Purchase Org', 'PO Number', 'PO Line Item', 'PO Type', 'Material/Service', 'Vendor Code', 'Vendor Short Name', 'Vendor Sector', 'GR Document No', 'GR Posting Date', 'GR Fiscal Year', 'GR Quantity', 'GR Amount', 'GR Vendor Name (SAP)', 'IR Document No', 'IR Posting Date', 'IR Amount', 'IR Vendor Name (Invoice)', 'TDS Amount', 'GST Diff Amount', 'Difference (IR-GR)', 'Currency', 'Plant', 'Cost Center', 'GL Account', 'Payment Terms', 'Aging (Days)', 'Aging Bucket', 'Discrepancy Flag', 'Discrepancy Reason', 'Manual Action', 'Reviewer', 'Review Date', 'Remarks']
+2026-04-29 14:29:27.961 | SUCCESS  | src.utils:validate_columns:27 - Column validation passed. Shape: (200, 36)
+2026-04-29 14:29:27.961 | SUCCESS  | src.extractor:load_sap_data:80 - Loaded 200 GR/IR open items successfully
+2026-04-29 14:29:27.977 | INFO     | src.extractor:load_sap_data:85 - Processed data saved to data\processed\cleaned_grir.csv
+2026-04-29 14:29:27.977 | INFO     | __main__:run_pipeline:25 - Total open items loaded: 200
+2026-04-29 14:29:27.977 | INFO     | src.tfidf_matcher:apply_tfidf_matching:93 - Building TF-IDF model on all vendor names...
+2026-04-29 14:29:27.997 | INFO     | src.tfidf_matcher:build_tfidf_matrix:54 - TF-IDF matrix built: 94 vendors, 572 features
+2026-04-29 14:29:27.997 | INFO     | src.tfidf_matcher:apply_tfidf_matching:102 - Computing TF-IDF vendor similarity for all pairs...
+2026-04-29 14:29:28.056 | SUCCESS  | src.tfidf_matcher:apply_tfidf_matching:123 - TF-IDF matching done | High: 128 | Medium: 33 | Low: 39
+2026-04-29 14:29:28.056 | INFO     | src.rule_scorer:apply_rule_scoring:114 - Applying weighted rule-based scoring...
+2026-04-29 14:29:28.076 | SUCCESS  | src.rule_scorer:apply_rule_scoring:139 - Scoring complete | AUTO-CLEAR: 139 | REVIEW: 47 | HOLD: 1 | ESCALATE: 13
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:45 - 
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:46 - ──────────────────────────────────────────────────
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:47 -   PIPELINE RESULTS SUMMARY
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:48 - ──────────────────────────────────────────────────
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:49 -   Total Items     : 200
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:50 -   AUTO-CLEAR      : 139  (69.5%)
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:51 -   REVIEW          : 47  (23.5%)
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:52 -   HOLD            : 1  (0.5%)
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:53 -   ESCALATE        : 13 (6.5%)
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:54 -   Cash to Unlock  : Rs.250,783,191.90
+2026-04-29 14:29:28.076 | INFO     | __main__:run_pipeline:55 - ──────────────────────────────────────────────────
+2026-04-29 14:29:28.088 | INFO     | src.rule_scorer:save_reports:166 - Saved 139 items → data\output\auto_clear.csv
+2026-04-29 14:29:28.090 | INFO     | src.rule_scorer:save_reports:166 - Saved 47 items → data\output\review.csv
+2026-04-29 14:29:28.090 | INFO     | src.rule_scorer:save_reports:166 - Saved 1 items → data\output\hold.csv
+2026-04-29 14:29:28.090 | INFO     | src.rule_scorer:save_reports:166 - Saved 13 items → data\output\escalate.csv
+2026-04-29 14:29:28.090 | SUCCESS  | src.rule_scorer:save_reports:168 - All reports saved successfully!
+2026-04-29 14:29:28.090 | INFO     | src.poster:run_auto_posting:87 - Starting SAP auto-posting for 139 items...
+2026-04-29 14:29:28.111 | SUCCESS  | src.poster:run_auto_posting:100 - Posting complete | Cleared: 139 / 139 | Cash Unlocked: Rs.250,783,191.90
+2026-04-29 14:29:28.111 | INFO     | src.poster:run_auto_posting:104 - Posting log saved → data/output/posting_log.csv
+2026-04-29 14:29:28.111 | SUCCESS  | __main__:run_pipeline:64 - Pipeline complete! 139 items cleared in SAP. Check data/output/ for reports.

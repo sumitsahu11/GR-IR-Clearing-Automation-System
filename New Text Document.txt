@@ -1,0 +1,5 @@
+streamlit run dashboard/app.py
+
+ Python RFC library jo SAP ke RFC protocol se
+directly baat karti hai. BAPI_ACC_GL_POSTING_POST function call karke GL clearing entry post
+hogi. 

@@ -1,0 +1,691 @@
+# ================================================================
+# GR/IR CLEARING AUTOMATION — COMPLETE WORKING DASHBOARD
+# File: dashboard/app.py
+#
+# INSTALL:
+#   pip install streamlit pandas plotly openpyxl
+#
+# RUN:
+#   streamlit run app.py
+#
+# NOTE: Apna data hai toh upar REAL_DATA = True karo
+#       warna sample data se kaam chalega
+# ================================================================
+
+import streamlit as st
+import pandas as pd
+import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import random
+from datetime import date, timedelta
+import io
+
+# ── PAGE CONFIG ─────────────────────────────────────────────────
+st.set_page_config(
+    page_title="GR/IR Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+# ── SETTINGS ─────────────────────────────────────────────────────
+REAL_DATA        = False   # True karo agar apna data use karna hai
+CLEARED_XLSX     = "data/output/cleared_items.xlsx"
+POSTING_LOG_CSV  = "data/output/posting_log.csv"
+
+# ── COLORS ───────────────────────────────────────────────────────
+GREEN  = "#10b981"
+AMBER  = "#f59e0b"
+BLUE   = "#3b82f6"
+RED    = "#ef4444"
+PURPLE = "#8b5cf6"
+TEAL   = "#14b8a6"
+ORANGE = "#f97316"
+NAVY   = "#1e3a5f"
+
+PBASE = dict(
+    font=dict(family="sans-serif", size=11),
+    paper_bgcolor="rgba(0,0,0,0)",
+    plot_bgcolor="rgba(0,0,0,0)",
+    margin=dict(l=10, r=10, t=36, b=10),
+)
+
+def snum(s):
+    return pd.to_numeric(s, errors="coerce").fillna(0)
+
+def fmtcr(v):
+    if v >= 1e7:  return f"₹{v/1e7:.2f}Cr"
+    if v >= 1e5:  return f"₹{v/1e5:.1f}L"
+    return f"₹{v:,.0f}"
+
+#  SAMPLE DATA 
+@st.cache_data
+def make_data():
+    random.seed(42); np.random.seed(42)
+    vendors = [
+        ("V001","Tata Consultancy Services Ltd","IT Services"),
+        ("V002","Infosys Limited","IT Services"),
+        ("V003","Wipro Limited","IT Services"),
+        ("V004","HCL Technologies Ltd","IT Services"),
+        ("V005","Tech Mahindra Limited","IT Services"),
+        ("V006","Larsen & Toubro Infotech","Engineering"),
+        ("V007","Siemens Ltd","Engineering"),
+        ("V008","ABB India Limited","Engineering"),
+        ("V009","Reliance Industries Ltd","Manufacturing"),
+        ("V010","Tata Steel Limited","Manufacturing"),
+    ]
+    vvariants = {
+        "V001":["TCS Ltd","Tata Consultancy Svcs","T.C.S. Limited"],
+        "V002":["Infosys Ltd","INFOSYS LIMITED","Infosys Technologies"],
+        "V003":["Wipro Ltd","WIPRO LIMITED","Wipro Technologies"],
+        "V004":["HCL Tech Ltd","HCL TECHNOLOGIES","HCL Tech"],
+        "V005":["Tech Mahindra Ltd","TechMahindra","Tech-Mahindra"],
+        "V006":["L&T Infotech","LTI Limited","Larsen Toubro Infotech"],
+        "V007":["Siemens India Ltd","SIEMENS LIMITED","Siemens India"],
+        "V008":["ABB India Ltd","ABB LIMITED","A.B.B. India"],
+        "V009":["Reliance Inds Ltd","RELIANCE INDUSTRIES","RIL"],
+        "V010":["Tata Steel Ltd","TATA STEEL LIMITED","Tatasteel"],
+    }
+    today = date(2025, 3, 31)
+    recs  = []
+    for i in range(200):
+        vc, vn, vs = random.choice(vendors)
+        gr_date  = today - timedelta(days=random.randint(5,180))
+        base_amt = round(random.uniform(50000, 2000000), 2)
+        po_num   = f"45{random.randint(10000000,99999999)}"
+        sc_list  = ["EXACT MATCH","ROUNDING - PAISE","ROUNDING - RUPEE",
+                    "TDS DEDUCTED","GST MISMATCH","PARTIAL INVOICE",
+                    "TIMING DIFF","MISSING INVOICE","DUPLICATE IR"]
+        sc_wt    = [0.12,0.18,0.15,0.12,0.12,0.10,0.11,0.06,0.04]
+        scenario = random.choices(sc_list, weights=sc_wt)[0]
+        ir_vname = random.choice(vvariants[vc])
+        ir_date  = gr_date + timedelta(days=random.randint(1,60))
+
+        if scenario == "EXACT MATCH":
+            ir_amt,diff = base_amt, 0.0; ir_vname = vn
+        elif scenario == "ROUNDING - PAISE":
+            ir_amt = round(base_amt+random.choice([-0.5,-0.25,0.25,0.5]),2); diff=round(ir_amt-base_amt,2)
+        elif scenario == "ROUNDING - RUPEE":
+            ir_amt = round(base_amt+random.choice([-5,-2,-1,1,2,5]),2); diff=round(ir_amt-base_amt,2)
+        elif scenario == "TDS DEDUCTED":
+            tds=round(base_amt*random.choice([0.01,0.02,0.05,0.10]),2); ir_amt=round(base_amt-tds,2); diff=round(ir_amt-base_amt,2)
+        elif scenario == "GST MISMATCH":
+            gst=round(base_amt*random.choice([0.05,0.12,0.18,0.28]),2); ir_amt=round(base_amt+gst,2); diff=round(ir_amt-base_amt,2)
+        elif scenario == "PARTIAL INVOICE":
+            ir_amt=round(base_amt*random.choice([0.25,0.50,0.75]),2); diff=round(ir_amt-base_amt,2)
+        elif scenario == "TIMING DIFF":
+            ir_date=gr_date+timedelta(days=random.randint(61,120)); ir_amt=base_amt; diff=0.0
+        elif scenario == "MISSING INVOICE":
+            ir_amt=None; ir_vname="-"; diff=None
+        else:
+            ir_amt=base_amt; diff=base_amt
+
+        aging=(today-gr_date).days
+        if aging<=30:     bucket="0-30 Days"
+        elif aging<=60:   bucket="31-60 Days"
+        elif aging<=90:   bucket="61-90 Days"
+        else:             bucket=">90 Days"
+
+        if scenario=="EXACT MATCH":
+            score=round(random.uniform(90,99),1); dec="AUTO-CLEAR"
+        elif scenario in ("ROUNDING - PAISE","ROUNDING - RUPEE"):
+            score=round(random.uniform(80,92),1); dec="AUTO-CLEAR"
+        elif scenario in ("TIMING DIFF","TDS DEDUCTED","GST MISMATCH"):
+            score=round(random.uniform(55,79),1); dec="REVIEW"
+        elif scenario=="PARTIAL INVOICE":
+            score=round(random.uniform(40,60),1); dec="HOLD"
+        elif scenario=="MISSING INVOICE":
+            score=round(random.uniform(20,40),1); dec="ESCALATE"
+        else:
+            score=round(random.uniform(10,30),1); dec="ESCALATE"
+
+        tfidf=round(random.uniform(0.4,0.95) if scenario!="MISSING INVOICE" else random.uniform(0.0,0.2),3)
+        vmq  ="HIGH" if tfidf>=0.65 else "MEDIUM" if tfidf>=0.45 else "LOW"
+
+        recs.append({
+            "Sr No":i+1,"PO Number":po_num,
+            "Vendor Code":vc,"Vendor Name":vn,"Vendor Sector":vs,
+            "GR Document No":f"500{random.randint(1000000,9999999)}",
+            "GR Posting Date":gr_date,"GR Amount":base_amt,
+            "GR Vendor Name (SAP)":vn,
+            "IR Document No":f"510{random.randint(1000000,9999999)}",
+            "IR Posting Date":ir_date,"IR Amount":ir_amt,
+            "IR Vendor Name (Invoice)":ir_vname,
+            "Difference (IR-GR)":diff,
+            "Currency":random.choices(["INR","INR","INR","USD","EUR"],[60,60,60,10,10])[0],
+            "Plant":random.choice(["1001","1002","1003","1004"]),
+            "Aging (Days)":aging,"Aging Bucket":bucket,
+            "Discrepancy Flag":scenario,
+            "confidence_score":score,"tfidf_vendor_score":tfidf,
+            "vendor_match_quality":vmq,"decision":dec,
+        })
+
+    df  = pd.DataFrame(recs)
+    ac  = df[df["decision"]=="AUTO-CLEAR"].copy()
+    rv  = df[df["decision"]=="REVIEW"].copy()
+    hd  = df[df["decision"]=="HOLD"].copy()
+    esc = df[df["decision"]=="ESCALATE"].copy()
+
+    pl_rows=[]
+    for _,row in ac.iterrows():
+        ok=random.random()<0.96
+        pl_rows.append({
+            "gr_document":row["GR Document No"],
+            "ir_document":row["IR Document No"],
+            "po_number":row["PO Number"],
+            "vendor_code":row["Vendor Code"],
+            "gr_amount":row["GR Amount"],
+            "confidence_score":row["confidence_score"],
+            "status":"CLEARED" if ok else "FAILED",
+            "sap_clearing_doc":f"190{random.randint(10000000,99999999)}" if ok else None,
+            "posting_date":str(date.today()),
+            "error_msg":None if ok else "SAP lock: doc in use",
+        })
+    pl = pd.DataFrame(pl_rows)
+    return df,ac,rv,hd,esc,pl
+
+# ── LOAD DATA ─────────────────────────────────────────────────────
+if REAL_DATA:
+    try:
+        ac  = pd.read_excel(CLEARED_XLSX, sheet_name="AUTO-CLEAR")
+        rv  = pd.read_excel(CLEARED_XLSX, sheet_name="REVIEW QUEUE")
+        hd  = pd.read_excel(CLEARED_XLSX, sheet_name="HOLD")
+        esc = pd.read_excel(CLEARED_XLSX, sheet_name="ESCALATE")
+        pl  = pd.read_csv(POSTING_LOG_CSV)
+        all_df = pd.concat([ac,rv,hd,esc],ignore_index=True)
+        st.sidebar.success("✅ Real data loaded")
+    except Exception as e:
+        st.sidebar.warning(f"Real data load fail: {e}\nSample data use ho raha hai.")
+        all_df,ac,rv,hd,esc,pl = make_data()
+else:
+    all_df,ac,rv,hd,esc,pl = make_data()
+
+total    = len(all_df)
+total_gr = snum(all_df["GR Amount"]).sum()
+cash_ul  = snum(ac["GR Amount"]).sum()
+cleared_ok = len(pl[pl["status"]=="CLEARED"]) if "status" in pl.columns else len(pl)
+
+# ── SIDEBAR ───────────────────────────────────────────────────────
+with st.sidebar:
+    st.markdown("## 📊 GR/IR Dashboard")
+    st.markdown("---")
+    page = st.radio("Navigate", [
+        "🏠 Overview",
+        "📊 Decision Analysis",
+        "🏢 Vendor Analysis",
+        "⏳ Aging & Trends",
+        "🔍 Review Queue",
+        "📝 Posting Log",
+        "🚨 Escalation",
+    ])
+    st.markdown("---")
+    st.markdown("**Filters**")
+    curr_opts   = ["All"] + sorted(all_df["Currency"].dropna().unique().tolist())
+    sel_curr    = st.selectbox("Currency", curr_opts)
+    vendor_opts = ["All"] + sorted(all_df["Vendor Code"].dropna().unique().tolist())
+    sel_vendor  = st.selectbox("Vendor", vendor_opts)
+    st.markdown("---")
+    if st.button("🔄 Refresh", use_container_width=True):
+        st.cache_data.clear(); st.rerun()
+    st.caption(f"Date: {date.today()}")
+    st.caption("Company: 1000 | TF-IDF Engine")
+
+def filt(df):
+    if df is None or df.empty: return df
+    if sel_curr!="All" and "Currency" in df.columns:
+        df=df[df["Currency"]==sel_curr]
+    if sel_vendor!="All" and "Vendor Code" in df.columns:
+        df=df[df["Vendor Code"]==sel_vendor]
+    return df
+
+# ================================================================
+# PAGE: OVERVIEW
+# ================================================================
+if "Overview" in page:
+    st.title("📊 GR/IR Clearing Dashboard")
+    st.caption(f"Company: 1000 | Engine: TF-IDF + Rule-Based | {date.today()}")
+    st.divider()
+
+    # KPIs
+    k1,k2,k3,k4,k5,k6 = st.columns(6)
+    k1.metric("📦 Total Items",   f"{total:,}",      f"GR: {fmtcr(total_gr)}")
+    k2.metric("✅ Auto-Cleared",  f"{len(ac):,}",    f"{round(len(ac)/max(total,1)*100,1)}%")
+    k3.metric("🔍 Review",        f"{len(rv):,}",    "Manual check")
+    k4.metric("⏸️ On Hold",       f"{len(hd):,}",    "Low score")
+    k5.metric("🚨 Escalate",      f"{len(esc):,}",   "Urgent")
+    k6.metric("💸 Cash Unlocked", fmtcr(cash_ul),    f"{cleared_ok} posted")
+
+    st.divider()
+
+    # Row 2
+    c1,c2 = st.columns([1,2])
+    with c1:
+        st.subheader("How Items Are Divided")
+        fig = go.Figure(go.Pie(
+            labels=["Auto-Clear","Review","Hold","Escalate"],
+            values=[len(ac),len(rv),len(hd),len(esc)],
+            hole=0.55,
+            marker=dict(colors=[GREEN,AMBER,BLUE,RED],
+                        line=dict(color="white",width=2)),
+            textinfo="label+percent", textfont_size=11,
+        ))
+        fig.add_annotation(text=f"<b>{total}</b><br>Total",
+                           x=0.5,y=0.5,showarrow=False,
+                           font=dict(size=15,color="#111"))
+        fig.update_layout(**PBASE,height=300,showlegend=True,
+                          legend=dict(orientation="h",y=-0.15,x=0))
+        st.plotly_chart(fig,use_container_width=True)
+
+    with c2:
+        st.subheader("Issue Types and Their Results")
+        fg = (all_df.groupby(["Discrepancy Flag","decision"])
+              .size().reset_index(name="count"))
+        cm = {"AUTO-CLEAR":GREEN,"REVIEW":AMBER,"HOLD":BLUE,"ESCALATE":RED}
+        fig2 = px.bar(fg,x="count",y="Discrepancy Flag",color="decision",
+                      orientation="h",text="count",color_discrete_map=cm,
+                      labels={"count":"Items","Discrepancy Flag":""})
+        fig2.update_traces(textposition="inside",textfont=dict(size=10,color="white"))
+        fig2.update_layout(**PBASE,height=300,barmode="stack",
+                           legend=dict(title="Decision",orientation="h",y=-0.2,x=0))
+        st.plotly_chart(fig2,use_container_width=True)
+
+    st.divider()
+
+    # Row 3
+    c3,c4 = st.columns(2)
+    with c3:
+        st.subheader("How Confident the System Is")
+        scores = snum(all_df["confidence_score"])
+        fig3 = go.Figure()
+        fig3.add_vrect(x0=80,x1=100,fillcolor=GREEN,opacity=0.07,line_width=0,
+                       annotation_text="Auto-Clear",
+                       annotation_font=dict(size=9,color=GREEN))
+        fig3.add_vrect(x0=55,x1=80,fillcolor=AMBER,opacity=0.07,line_width=0,
+                       annotation_text="Review",
+                       annotation_font=dict(size=9,color=AMBER))
+        fig3.add_vrect(x0=0,x1=55,fillcolor=RED,opacity=0.04,line_width=0,
+                       annotation_text="Hold",
+                       annotation_font=dict(size=9,color=RED))
+        fig3.add_trace(go.Histogram(x=scores,nbinsx=25,
+                                    marker=dict(color=BLUE,opacity=0.75,
+                                                line=dict(color="white",width=0.5))))
+        fig3.add_vline(x=80,line_dash="dash",line_color=GREEN,line_width=2)
+        fig3.add_vline(x=55,line_dash="dash",line_color=AMBER,line_width=2)
+        fig3.update_layout(**PBASE,height=300,showlegend=False,
+                           xaxis=dict(title="Score (0-100)",
+                                      tickvals=list(range(0,101,10))),
+                           yaxis=dict(title="Items"))
+        st.plotly_chart(fig3,use_container_width=True)
+
+    with c4:
+        st.subheader("How Long Items Have Been Pending")
+        border = ["0-30 Days","31-60 Days","61-90 Days",">90 Days"]
+        ag = (all_df.groupby("Aging Bucket")
+              .agg(Items=("GR Amount","count"),
+                   Amount=("GR Amount",lambda x:snum(x).sum()))
+              .reset_index())
+        ag["Aging Bucket"] = pd.Categorical(ag["Aging Bucket"],
+                                             categories=border,ordered=True)
+        ag = ag.sort_values("Aging Bucket")
+        fig4 = make_subplots(specs=[[{"secondary_y":True}]])
+        fig4.add_trace(go.Bar(
+            x=ag["Aging Bucket"],y=ag["Items"],
+            marker_color=[GREEN,AMBER,ORANGE,RED],
+            text=ag["Items"],textposition="outside",name="Items",
+        ),secondary_y=False)
+        fig4.add_trace(go.Scatter(
+            x=ag["Aging Bucket"],y=ag["Amount"]/1e5,
+            name="Amount(₹L)",mode="lines+markers",
+            line=dict(color=PURPLE,width=2.5),
+            marker=dict(size=8,color=PURPLE,line=dict(color="white",width=2)),
+        ),secondary_y=True)
+        fig4.update_layout(**PBASE,height=300,
+                           legend=dict(orientation="h",y=-0.2))
+        fig4.update_yaxes(title_text="Items",secondary_y=False)
+        fig4.update_yaxes(title_text="Amount (₹L)",secondary_y=True)
+        st.plotly_chart(fig4,use_container_width=True)
+
+    st.divider()
+
+    # Row 4
+    c5,c6 = st.columns(2)
+    with c5:
+        st.subheader("Vendor Name Matching Quality")
+        vmq = all_df["vendor_match_quality"].value_counts().reset_index()
+        vmq.columns = ["Quality","Count"]
+        vmq["Quality"] = pd.Categorical(vmq["Quality"],
+                                         ["HIGH","MEDIUM","LOW"],ordered=True)
+        vmq = vmq.sort_values("Quality")
+        fig5 = px.bar(vmq,x="Quality",y="Count",color="Quality",text="Count",
+                      color_discrete_map={"HIGH":GREEN,"MEDIUM":AMBER,"LOW":RED})
+        fig5.update_traces(textposition="outside")
+        fig5.update_layout(**PBASE,height=280,showlegend=False)
+        st.plotly_chart(fig5,use_container_width=True)
+
+    with c6:
+        st.subheader("Purchase vs Invoice Amount by Issue Type")
+        fa = (all_df.groupby("Discrepancy Flag")
+              .agg(GR=("GR Amount",lambda x:snum(x).sum()),
+                   IR=("IR Amount",lambda x:snum(x).sum()))
+              .reset_index())
+        fig6 = go.Figure()
+        fig6.add_trace(go.Bar(x=fa["Discrepancy Flag"],y=fa["GR"]/1e5,
+                              name="GR",marker_color=BLUE))
+        fig6.add_trace(go.Bar(x=fa["Discrepancy Flag"],y=fa["IR"]/1e5,
+                              name="IR",marker_color=TEAL,opacity=0.7))
+        fig6.update_layout(**PBASE,height=280,barmode="group",
+                           xaxis=dict(tickangle=-30,tickfont_size=9),
+                           yaxis=dict(title="Amount (₹L)"),
+                           legend=dict(orientation="h",y=-0.3))
+        st.plotly_chart(fig6,use_container_width=True)
+
+
+# ================================================================
+# PAGE: DECISION ANALYSIS
+# ================================================================
+elif "Decision" in page:
+    st.title("📊 Decision Analysis")
+    st.divider()
+
+    c1,c2 = st.columns(2)
+    with c1:
+        st.subheader("Score Range for Each Decision Type")
+        fig1 = go.Figure()
+        for dec,clr in [("AUTO-CLEAR",GREEN),("REVIEW",AMBER),
+                        ("HOLD",BLUE),("ESCALATE",RED)]:
+            sub = snum(all_df[all_df["decision"]==dec]["confidence_score"])
+            if len(sub):
+                fig1.add_trace(go.Box(y=sub,name=dec,marker_color=clr,
+                                      boxmean=True))
+        fig1.update_layout(**PBASE,height=340,showlegend=False,
+                           yaxis=dict(title="Confidence Score"))
+        st.plotly_chart(fig1,use_container_width=True)
+
+    with c2:
+        st.subheader("Which Issues Lead to Which Decisions")
+        hmap = pd.crosstab(all_df["Discrepancy Flag"],all_df["decision"])
+        fig2 = go.Figure(go.Heatmap(
+            z=hmap.values,x=hmap.columns.tolist(),y=hmap.index.tolist(),
+            colorscale=[[0,"#eff6ff"],[0.5,BLUE],[1,NAVY]],
+            text=hmap.values,texttemplate="%{text}",
+            textfont=dict(size=12),showscale=True,
+        ))
+        fig2.update_layout(**PBASE,height=340,
+                           xaxis=dict(title="Decision"),yaxis=dict(title=""))
+        st.plotly_chart(fig2,use_container_width=True)
+
+    st.divider()
+    st.subheader("Summary Table")
+    rows=[]
+    for lbl,dfb,em in [("AUTO-CLEAR",ac,"✅"),("REVIEW",rv,"🔍"),
+                        ("HOLD",hd,"⏸️"),("ESCALATE",esc,"🚨")]:
+        gr=snum(dfb["GR Amount"]).sum()
+        ir=snum(dfb["IR Amount"]).sum()
+        sc=snum(dfb.get("confidence_score",pd.Series())).mean()
+        rows.append({"Decision":f"{em} {lbl}","Items":len(dfb),
+                     "% Share":f"{round(len(dfb)/max(total,1)*100,1)}%",
+                     "GR Amount":fmtcr(gr),"IR Amount":fmtcr(ir),
+                     "Avg Score":f"{sc:.1f}"})
+    st.dataframe(pd.DataFrame(rows),use_container_width=True,hide_index=True)
+
+
+# ================================================================
+# PAGE: VENDOR ANALYSIS
+# ================================================================
+elif "Vendor" in page:
+    st.title("🏢 Vendor Analysis")
+    st.divider()
+
+    vg = (all_df.groupby("Vendor Code").agg(
+        Name       =("Vendor Name","first"),
+        Sector     =("Vendor Sector","first"),
+        Items      =("GR Amount","count"),
+        GR_Amt     =("GR Amount",lambda x:snum(x).sum()),
+        IR_Amt     =("IR Amount",lambda x:snum(x).sum()),
+        Avg_Score  =("confidence_score",lambda x:snum(x).mean()),
+        Auto_Clear =("decision",lambda x:(x=="AUTO-CLEAR").sum()),
+        Review     =("decision",lambda x:(x=="REVIEW").sum()),
+        Hold       =("decision",lambda x:(x=="HOLD").sum()),
+        Escalate   =("decision",lambda x:(x=="ESCALATE").sum()),
+    ).reset_index())
+    vg["Auto_Rate"] = (vg["Auto_Clear"]/vg["Items"]*100).round(1)
+    vg = vg.sort_values("GR_Amt",ascending=False)
+
+    c1,c2 = st.columns(2)
+    with c1:
+        st.subheader("Purchase Amount by Vendor")
+        top = vg.head(10)
+        fig1 = go.Figure()
+        fig1.add_trace(go.Bar(x=top["GR_Amt"]/1e5,y=top["Vendor Code"],
+                              orientation="h",name="GR",marker_color=BLUE,
+                              text=[fmtcr(v) for v in top["GR_Amt"]],
+                              textposition="inside",
+                              textfont=dict(color="white",size=10)))
+        fig1.add_trace(go.Bar(x=top["IR_Amt"]/1e5,y=top["Vendor Code"],
+                              orientation="h",name="IR",marker_color=TEAL,opacity=0.6))
+        fig1.update_layout(**PBASE,height=360,barmode="overlay",
+                           xaxis=dict(title="Amount (₹L)"),
+                           legend=dict(orientation="h",y=-0.18))
+        st.plotly_chart(fig1,use_container_width=True)
+
+    with c2:
+        st.subheader("Automatic Approval Rate per Vendor")
+        fig2 = go.Figure(go.Bar(
+            x=vg["Vendor Code"],y=vg["Auto_Rate"],
+            marker=dict(color=vg["Auto_Rate"],
+                        colorscale=[[0,RED],[0.5,AMBER],[1,GREEN]],
+                        cmin=0,cmax=100,showscale=True,
+                        colorbar=dict(title="%",thickness=12),
+                        line=dict(color="white",width=0.5)),
+            text=[f"{v:.0f}%" for v in vg["Auto_Rate"]],
+            textposition="outside",
+        ))
+        fig2.add_hline(y=80,line_dash="dash",line_color=GREEN,line_width=1.5,
+                       annotation_text="Target 80%",
+                       annotation_font=dict(size=10,color=GREEN))
+        fig2.update_layout(**PBASE,height=360,
+                           yaxis=dict(title="Auto-Clear %",range=[0,115]),
+                           xaxis=dict(tickangle=-30))
+        st.plotly_chart(fig2,use_container_width=True)
+
+    st.divider()
+    st.subheader("Vendor Detail Table")
+    sv = vg.copy()
+    sv["GR_Amt"]    = sv["GR_Amt"].apply(fmtcr)
+    sv["IR_Amt"]    = sv["IR_Amt"].apply(fmtcr)
+    sv["Avg_Score"] = sv["Avg_Score"].apply(lambda x:f"{x:.1f}")
+    sv["Auto_Rate"] = sv["Auto_Rate"].apply(lambda x:f"{x:.1f}%")
+    st.dataframe(sv[["Vendor Code","Name","Sector","Items","GR_Amt",
+                      "IR_Amt","Avg_Score","Auto_Rate","Auto_Clear",
+                      "Review","Hold","Escalate"]].rename(columns={
+        "Name":"Vendor","GR_Amt":"GR Amount","IR_Amt":"IR Amount",
+        "Avg_Score":"Avg Score","Auto_Rate":"Auto %",
+        "Auto_Clear":"Auto-Clear"}),
+        use_container_width=True,hide_index=True)
+
+
+# ================================================================
+# PAGE: AGING & TRENDS
+# ================================================================
+elif "Aging" in page:
+    st.title("⏳ Aging & Trends")
+    st.divider()
+
+    c1,c2 = st.columns(2)
+    with c1:
+        st.subheader("Pending Items by Time Period")
+        border = ["0-30 Days","31-60 Days","61-90 Days",">90 Days"]
+        ag = (all_df.groupby("Aging Bucket")
+              .agg(Items=("GR Amount","count"),
+                   Amount=("GR Amount",lambda x:snum(x).sum()),
+                   Esc=("decision",lambda x:(x=="ESCALATE").sum()))
+              .reset_index())
+        ag["Aging Bucket"] = pd.Categorical(ag["Aging Bucket"],
+                                             categories=border,ordered=True)
+        ag = ag.sort_values("Aging Bucket")
+        fig1 = px.bar(ag,x="Aging Bucket",y="Items",
+                      color="Aging Bucket",text="Items",
+                      color_discrete_sequence=[GREEN,AMBER,ORANGE,RED])
+        fig1.update_traces(textposition="outside")
+        fig1.update_layout(**PBASE,height=300,showlegend=False)
+        st.plotly_chart(fig1,use_container_width=True)
+        ag2=ag.copy()
+        ag2["Amount"]=ag2["Amount"].apply(fmtcr)
+        ag2["% Share"]=ag2["Items"].apply(lambda x:f"{round(x/max(total,1)*100,1)}%")
+        st.dataframe(ag2[["Aging Bucket","Items","% Share","Amount","Esc"]].rename(
+            columns={"Esc":"Escalated"}),use_container_width=True,hide_index=True)
+
+    with c2:
+        st.subheader("Month by Month Progress")
+        all_df["GR Posting Date"] = pd.to_datetime(all_df["GR Posting Date"],errors="coerce")
+        monthly = (all_df.dropna(subset=["GR Posting Date"])
+                   .assign(Month=lambda d:d["GR Posting Date"].dt.to_period("M"))
+                   .groupby("Month").agg(
+                       Items=("GR Amount","count"),
+                       Amount=("GR Amount",lambda x:snum(x).sum()))
+                   .reset_index())
+        monthly["Month"] = monthly["Month"].astype(str)
+        monthly = monthly.tail(12)
+        fig2 = make_subplots(specs=[[{"secondary_y":True}]])
+        fig2.add_trace(go.Bar(x=monthly["Month"],y=monthly["Items"],
+                              name="Items",marker_color=BLUE,opacity=0.75),secondary_y=False)
+        fig2.add_trace(go.Scatter(x=monthly["Month"],y=monthly["Amount"]/1e5,
+                                  name="Amount(₹L)",mode="lines+markers",
+                                  line=dict(color=GREEN,width=2.5),
+                                  marker=dict(size=7,color=GREEN)),secondary_y=True)
+        fig2.update_layout(**PBASE,height=300,
+                           xaxis=dict(tickangle=-30),
+                           legend=dict(orientation="h",y=-0.25))
+        fig2.update_yaxes(title_text="Items",secondary_y=False)
+        fig2.update_yaxes(title_text="Amount (₹L)",secondary_y=True)
+        st.plotly_chart(fig2,use_container_width=True)
+
+
+# ================================================================
+# PAGE: REVIEW QUEUE
+# ================================================================
+elif "Review" in page:
+    st.title("🔍 Review Queue")
+    rv_f = filt(rv.copy())
+    st.warning(f"⚠️ {len(rv_f)} items ko manual review chahiye (score 55–79)")
+    st.divider()
+
+    fc1,fc2,fc3 = st.columns(3)
+    with fc1:
+        flags = ["All"] + sorted(rv_f["Discrepancy Flag"].dropna().unique().tolist())
+        sf    = st.selectbox("Flag",flags)
+        if sf!="All": rv_f=rv_f[rv_f["Discrepancy Flag"]==sf]
+    with fc2:
+        mn = st.slider("Min Score",0,100,55)
+        rv_f = rv_f[snum(rv_f["confidence_score"])>=mn]
+    with fc3:
+        srt = st.selectbox("Sort By",["confidence_score","GR Amount","Aging (Days)"])
+        if srt in rv_f.columns:
+            rv_f = rv_f.sort_values(srt,ascending=False)
+
+    st.info(f"Showing {len(rv_f)} items")
+    scols=[c for c in ["PO Number","Vendor Code","GR Vendor Name (SAP)",
+                        "IR Vendor Name (Invoice)","GR Amount","IR Amount",
+                        "Difference (IR-GR)","tfidf_vendor_score",
+                        "confidence_score","Discrepancy Flag","Aging (Days)"]
+           if c in rv_f.columns]
+    st.dataframe(rv_f[scols],use_container_width=True,height=400,hide_index=True)
+
+    d1,d2 = st.columns(2)
+    with d1:
+        st.download_button("⬇️ CSV",rv_f.to_csv(index=False).encode(),
+                           "review_queue.csv","text/csv",use_container_width=True)
+    with d2:
+        buf=io.BytesIO()
+        with pd.ExcelWriter(buf,engine="openpyxl") as w:
+            rv_f.to_excel(w,index=False)
+        st.download_button("⬇️ Excel",buf.getvalue(),
+                           "review_queue.xlsx",
+                           "application/vnd.ms-excel",use_container_width=True)
+
+
+# ================================================================
+# PAGE: POSTING LOG
+# ================================================================
+elif "Posting" in page:
+    st.title("📝 SAP Posting Log")
+    st.divider()
+
+    if pl.empty:
+        st.info("Posting log nahi mila. main.py run karo.")
+    else:
+        ok_pl   = pl[pl["status"]=="CLEARED"] if "status" in pl.columns else pl
+        fail_pl = pl[pl["status"]=="FAILED"]  if "status" in pl.columns else pd.DataFrame()
+        ok_cash = snum(ok_pl.get("gr_amount",pd.Series())).sum()
+        sr      = round(len(ok_pl)/max(len(pl),1)*100,1)
+
+        m1,m2,m3,m4 = st.columns(4)
+        m1.metric("Total Posted",  f"{len(pl):,}")
+        m2.metric("✅ Cleared",    f"{len(ok_pl):,}",  f"{sr}% success")
+        m3.metric("❌ Failed",     f"{len(fail_pl):,}")
+        m4.metric("Cash Cleared",  fmtcr(ok_cash))
+
+        st.divider()
+        c1,c2 = st.columns([1,2])
+        with c1:
+            st.subheader("Posting Success Rate")
+            fig1 = go.Figure(go.Pie(
+                labels=["Cleared","Failed"],
+                values=[len(ok_pl),max(len(fail_pl),0)],
+                hole=0.55,
+                marker=dict(colors=[GREEN,RED],line=dict(color="white",width=2)),
+                textinfo="label+percent"))
+            fig1.add_annotation(text=f"<b>{sr}%</b><br>Success",
+                                x=0.5,y=0.5,showarrow=False,font=dict(size=14))
+            fig1.update_layout(**PBASE,height=260,showlegend=False)
+            st.plotly_chart(fig1,use_container_width=True)
+
+        with c2:
+            st.subheader("Recently Posted Items")
+            scl=[c for c in ["gr_document","ir_document","po_number","vendor_code",
+                              "gr_amount","confidence_score","status",
+                              "sap_clearing_doc","posting_date"] if c in pl.columns]
+            st.dataframe(pl[scl].head(50),use_container_width=True,
+                         height=260,hide_index=True)
+
+        if not fail_pl.empty:
+            st.error(f"❌ {len(fail_pl)} items fail hue — retry needed")
+            st.dataframe(fail_pl,use_container_width=True,hide_index=True)
+
+        st.download_button("⬇️ Download Log",
+                           pl.to_csv(index=False).encode(),
+                           "posting_log.csv","text/csv")
+
+
+# ================================================================
+# PAGE: ESCALATION
+# ================================================================
+elif "Escalation" in page:
+    st.title("🚨 Escalation Center")
+    st.divider()
+    esc_f = filt(esc.copy())
+
+    if esc_f.empty:
+        st.success("✅ Koi escalated items nahi! Sab theek hai.")
+    else:
+        st.error(f"🚨 {len(esc_f)} items ko immediate action chahiye!")
+
+        if "Discrepancy Flag" in esc_f.columns:
+            ce = st.columns(len(esc_f["Discrepancy Flag"].unique()))
+            for i,(fl,cnt) in enumerate(esc_f["Discrepancy Flag"].value_counts().items()):
+                with ce[i]:
+                    st.metric(fl,cnt,"Needs action")
+
+        st.divider()
+        st.warning("🔴 **MISSING INVOICE:** Vendor ko contact karo — 30 din mein invoice nahi aaya toh PO cancel.")
+        st.error("🟠 **DUPLICATE IR:** AP team se verify karo — fraud check zaroori.")
+
+        se=[c for c in ["PO Number","Vendor Code","GR Vendor Name (SAP)",
+                         "GR Amount","IR Amount","Discrepancy Flag",
+                         "Aging (Days)","Aging Bucket","confidence_score"]
+            if c in esc_f.columns]
+        st.dataframe(esc_f[se],use_container_width=True,height=380,hide_index=True)
+        st.download_button("⬇️ Download",esc_f.to_csv(index=False).encode(),
+                           "escalation.csv","text/csv")
